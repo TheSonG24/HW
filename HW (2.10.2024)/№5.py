@@ -1,7 +1,5 @@
 import itertools as f
 k = list(f.product('полина', repeat=8))
-gl = ['о', 'и', 'а']
-sogl = ['п', 'л', 'н']
 summ = 0
 for x in k:
     x = ''.join(x)
