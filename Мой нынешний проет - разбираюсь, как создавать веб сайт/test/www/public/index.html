@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-container">
+        <header>
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showSection('home')">Главная</a></li>
+                        <li><a href="#" onclick="showSection('menu')">Меню</a></li>
+                    </ul>
+                </nav>
+                <div class="card">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/Logo/instagram_icon.png" alt="Instagram">
+                </a>
+                <!-- VK -->
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/Logo/vk_icon.png" alt="Twitter">
+                </a>
+                <!-- Telegram -->
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="images/Logo/telegram_icon.png" alt="LinkedIn">
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://www.whatsapp.com" target="_blank">
+                    <img src="images/Logo/whatsapp_icon.png" alt="WhatsApp">
+                </a>
+                </div>
+                <div class="contact-info">
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                    <p>Email: info@restaurant.com</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="home">
+                <h1>Добро пожаловать в наш ресторан!</h1>
+                <p>Наслаждайтесь изысканными блюдами!</p>
+            </section>
+
+            <section id="menu" style="display:none;">
+                <div class="main-container">
+                    <!-- Рекламный баннер -->
+                    <div id="ad-container">
+                    <div class="ad-slide" id="ad-slide">
+                        <img src="images/AD/ad1.jpg" alt="Реклама 1" class="ad-image">
+                        <img src="images/AD/ad2.jpg" alt="Реклама 2" class="ad-image" style="display:none;">
+                        <img src="images/AD/ad3.jpg" alt="Реклама 3" class="ad-image" style="display:none;">
+                    </div>
+                    <button id="prev-ad" class="ad-control">‹</button>
+                    <button id="next-ad" class="ad-control">›</button>
+                    </div>
+                    <section id="filter-section">
+                        <h2>Фильтр поиска</h2>
+                        <form id="filter-form">
+                            <label for="min-price">Минимальная цена:</label>
+                            <input type="number" id="min-price" name="min-price" placeholder="0" min="0">
+        
+                            <label for="max-price">Максимальная цена:</label>
+                            <input type="number" id="max-price" name="max-price" placeholder="1000" min="0">
+                            <div class="IsNew">
+                                    <input class="inp-cbx" id="new-dishes" type="checkbox">
+                                    <label class="cbx" for="new-dishes"><span>
+                                    <svg width="12px" height="10px">
+    
+                                    </svg></span><span>Показать только новинки</span></label>
+                                    <svg class="inline-svg">
+                                    <symbol id="check-4" viewBox="0 0 12 10">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </symbol>
+                                </svg>
+                            </div>
+                            <button type="button" id="apply-filters">Применить фильтры</button>   
+                        </form>
+                    </section>
+                    <div id="menu-categories">
+                        <!-- Menu items will be dynamically loaded here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Все права защищены &copy; 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

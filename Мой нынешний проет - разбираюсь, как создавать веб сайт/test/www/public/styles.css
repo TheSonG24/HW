@@ -1,0 +1,465 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container {
+    display: flex; /* Flexbox для горизонтального размещения фильтра и каталога */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    width: 100%;
+    max-width: 1500px; /* Максимальная ширина контейнера */
+    margin: 20px auto;
+    padding: 20px;
+    gap: 20px; /* Расстояние между фильтром и меню */
+}
+
+#menu-categories {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет карточкам переходить на следующую строку */
+    gap: 20px;
+    justify-content: flex-start; /* Выравнивание карточек по левому краю */
+    width: 100%;
+}
+
+/* Каталог блюд */
+.menu-category {
+    width: 100%; /* Занимает всю доступную ширину */
+    padding: 10px;
+    margin-bottom: 20px; /* Отступ между категориями */
+}
+
+/* Основное расположение элементов меню */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переходить на следующую строку */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+.menu-item {
+    flex: 1 1 calc(33.333% - 20px); /* По умолчанию 3 элемента в ряд */
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+.dish-image {
+    width: 100%;
+    max-width: 300px; /* Максимальная ширина изображения */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Изображения в меню */
+.menu-item img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    object-fit: cover; /* Заполняем контейнер изображением, сохраняя пропорции */
+}
+
+/* Адаптация для мобильных устройств (экраны до 768px) */
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 20px); /* По 2 элемента в ряд */
+    }
+}
+
+.menu-item-info {
+    padding: 10px;
+}
+
+.menu-item-info h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.menu-item-info p {
+    margin: 5px 0;
+}
+
+.menu-item-info .price {
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-item-info button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #f04;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item-info button:hover {
+    background-color: #c03;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 480px) {
+    .menu-item {
+        flex: 1 1 100%;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Секция фильтра */
+#filter-section {
+    width: 300px; /* Фиксированная ширина фильтра */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#filter-form label {
+    font-weight: bold;
+}
+
+#filter-form input[type="number"],
+#filter-form input[type="checkbox"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#apply-filters {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#menu {
+    margin-right: auto;
+}
+
+/* Контейнер меню */
+#menu-categories {
+    width: 70%; /* Оставляем 70% для меню */
+    float: left;
+}
+
+#ad-container {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: auto; /* Автоматическая подстройка высоты под изображение */
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 0; /* Убираем отступы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Скрываем изображения, выходящие за пределы контейнера */
+}
+
+#ad-slide {
+    display: flex; /* Flexbox для горизонтального размещения изображений */
+    transition: transform 1s ease; /* Плавный переход между изображениями */
+}
+
+.ad-image {
+    width: 100%; /* Ширина изображения будет равна ширине контейнера */
+    height: auto; /* Высота будет пропорциональна ширине */
+    object-fit: cover; /* Изображение заполняет контейнер, сохраняя пропорции */
+}
+
+
+/* Кнопки переключения */
+.ad-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#prev-ad {
+    left: 10px; /* Кнопка влево */
+}
+
+#next-ad {
+    right: 10px; /* Кнопка вправо */
+}
+
+.ad-control:hover {
+    background-color: rgba(255, 64, 64, 0.8);
+}
+
+/* Медиа-запрос для экранов с шириной 1400 пикселей и меньше */
+@media (max-width: 1400px) {
+    #ad-container {
+        display: none; /* Скрываем баннер */
+    }
+}
+
+.IsNew * {
+  box-sizing: border-box;
+  color: black;
+}
+
+.IsNew .cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.IsNew .cbx:not(:last-child) {
+  margin-right: 6px;
+}
+
+.IsNew .cbx:hover {
+  background: rgba(0,119,255,0.06);
+}
+
+.IsNew .cbx span {
+  float: left;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.IsNew .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  transform: scale(1);
+  border: 1px solid #cccfdb;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+}
+
+.IsNew .cbx span:first-child img {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.IsNew .cbx span:last-child {
+  padding-left: 8px;
+  line-height: 18px;
+}
+
+.IsNew .cbx:hover span:first-child {
+  border-color: #07f;
+}
+
+.IsNew .inp-cbx {
+  position: absolute;
+  visibility: hidden;
+}
+
+.IsNew .inp-cbx:checked + .cbx span:first-child {
+  background: #07f;
+  border-color: #07f;
+  animation: wave-4 0.4s ease;
+}
+
+.IsNew .inp-cbx:checked + .cbx span:first-child img {
+  stroke-dashoffset: 0;
+}
+
+.IsNew .inline-img {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media screen and (max-width: 640px) {
+  .IsNew .cbx {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+@-moz-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@-o-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+/* Основные стили карточки */
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(49, 49, 49, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 15px;
+  gap: 15px;
+  overflow: hidden;
+  border-radius: 27px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* Для всех контейнеров с социальными кнопками */
+.card a {
+  width: 52px;
+  height: 52px;
+  background-color: rgba(117, 117, 117, 0);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+/* Логотипы PNG для социальных сетей */
+.card a img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover; /* Убедимся, что изображение заполняет контейнер */
+}
+
+/* Ховер эффект для кнопок */
+.card a:hover {
+  transform: scale(1.2);
+  border-radius: 15px;
+}
+
+/* Стили для каждой социальной сети */
+.card a:nth-child(1):hover {
+  background-color: #d62976; /* Instagram */
+}
+
+.card a:nth-child(2):hover {
+  background-color: #2929ff /* Twitter */
+}
+
+.card a:nth-child(3):hover {
+  background-color: #0072b1; /* LinkedIn */
+}
+
+.card a:nth-child(4):hover {
+  background-color: #25d366; /* WhatsApp */
+}
+
+/* Анимация нажатия */
+.card a:active {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}

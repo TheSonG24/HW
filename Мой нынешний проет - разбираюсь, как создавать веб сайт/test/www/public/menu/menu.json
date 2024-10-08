@@ -1,0 +1,62 @@
+{
+  "categories": [
+    {
+      "name": "Пицца",
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Пицца Маргарита",
+          "price": 450,
+          "description": "Классическая пицца с томатным соусом и сыром моцарелла.",
+          "imageUrl": "/images/pizza1.jpg",
+          "isNew": true
+        },
+        {
+          "id": 2,
+          "name": "Пицца Пепперони",
+          "price": 500,
+          "description": "Пицца с колбасками пепперони и сыром моцарелла.",
+          "imageUrl": "/images/pizza1.jpg",
+          "isNew": false
+        },
+        {
+          "id": 2,
+          "name": "Пицца Пепперони",
+          "price": 500,
+          "description": "Пицца с колбасками пепперони и сыром моцарелла.",
+          "imageUrl": "/images/pizza1.jpg",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "name": "Бургеры",
+      "dishes": [
+        {
+          "id": 3,
+          "name": "Чизбургер",
+          "price": 300,
+          "description": "Классический бургер с сыром и котлетой из говядины.",
+          "imageUrl": "/images/pizza1.jpg",
+          "isNew": false
+        },
+        {
+          "id": 2,
+          "name": "Пицца Пепперони",
+          "price": 500,
+          "description": "Пицца с колбасками пепперони и сыром моцарелла.",
+          "imageUrl": "/images/pizza1.jpg",
+          "isNew": false
+        },
+        {
+          "id": 2,
+          "name": "Пицца Пепперони",
+          "price": 500,
+          "description": "Пицца с колбасками пепперони и сыром моцарелла.",
+          "imageUrl": "/images/pizza1.jpg",
+          "isNew": false
+        }
+      ]
+    }
+  ]
+}
